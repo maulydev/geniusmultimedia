@@ -1,12 +1,20 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
 import SectionTitle from "./SectionTitle.astro";
+
+import { Icon } from "astro-icon"
 ---
 
 <section id="Projects" class="p-4 md:p-8">
     <SectionTitle title="PROJECTS" />
     <ProjectCard />
-    <div class="text-center mt-8 active:scale-[.95]">
-        <a href="/projects" class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800">{"SEE MORE >>"}</a>
+    <div class="text-center mt-8">
+        <a href="#_" class="relative inline-flex items-center justify-center p-4 px-6 py-2 overflow-hidden font-medium text-blue-600 transition duration-300 ease-out border-2 border-blue-700 rounded group">
+            <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-blue-700 group-hover:translate-x-0 ease">
+            <div class="w-5 h-5"> <Icon name="vaadin:arrow-forward" /> </div>
+            </span>
+            <span class="absolute flex items-center justify-center w-full h-full text-blue-700 transition-all duration-300 transform group-hover:translate-x-full ease">Other projects</span>
+            <span class="relative invisible">Other projec</span>
+        </a>
     </div>
 </section>

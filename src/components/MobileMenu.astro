@@ -1,0 +1,17 @@
+---
+const navlinks = ['Home', 'About', 'Projects', 'Contact']
+---
+
+<nav class="md:hidden bg-blue-800 text-slate-100 sticky top-0 z-10 inset-x-0">
+    <ul class="flex gap-6 text-sm px-4 py-2 justify-center">
+        {
+            navlinks.map(link => {
+                return (
+                    <li>
+                        <a href={`#${link}`}>{link}</a>
+                    </li>
+                )
+            })
+        }
+    </ul>
+</nav>
