@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/Layout.astro"
+import ProjectNav from "../components/ProjectNav.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import ProjectHeader from "../components/ProjectHeader.astro";
+
+const SKILLS = [
+    'SELECT CATEGORY',
+    '3D MODELING', 
+    'GRAPHIC DESIGN', 
+    'APARREL PRINTING', 
+    'TIE & DIE', 
+    'PENCIL ART', 
+    'ANIMATION MOVIES', 
+    'VIDEO EDITING', 
+    'PHOTOGRAPHY'
+]
+---
+
+<Layout title="Projects">
+    <ProjectNav link="/" />
+    <ProjectHeader />
+    <section class="bg-white p-4 md:p-8 mb-8">
+        <section class="[&>*]:appearance-none [&>*]:outline-none flex justify-between">
+            <span class="hidden md:flex"></span>
+            <!-- <input type="search" class="p-2 border-b-2" placeholder="Quick search"> -->
+            <select name="" id="" class="lg:cursor-pointer hover:bg-slate-200 border-b-2 w-full sm:w-max p-4 bg-slate-100 shadow-inner rounded font-medium">
+                {
+                    SKILLS.map(SKILL => <option value={SKILL}>{SKILL}</option>)
+                }
+            </select>
+        </section>
+        <hr class="my-4">
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+    </section>
+</Layout>

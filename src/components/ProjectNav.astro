@@ -1,0 +1,14 @@
+---
+import { Icon } from 'astro-icon'
+
+const { link } = Astro.props
+---
+
+<header class="fixed top-0 inset-x-0 p-4 bg-white shadow z-50">
+    <div class="container mx-auto flex justify-between items-center">
+        <a title="Go back" class="text-slate-900 font-black w-[1.5rem] h-[1.5rem] rounded-full flex gap-1 hover:text-red-600" href={link}>
+            <Icon name="vaadin:arrow-backward" />
+        </a>
+        <a class="font-black text-lg md:text-2xl text-slate-900 flex gap-1" href="/">GENIUS <span class="hidden sm:block">MULTIMEDIA</span> </a>
+    </div>
+</header>

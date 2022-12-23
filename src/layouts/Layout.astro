@@ -1,0 +1,43 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+// Components
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-slate-100 scrollbar-thin scrollbar-thumb-blue-700 scrollbar-track-slate-900">
+		<main class="container mx-auto mt-18">
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style is:global> 
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;&display=swap');
+	
+	html{
+		scroll-behavior: smooth;
+		scroll-padding-top: 4rem;
+	}
+	
+	*{
+		font-family: 'Poppins', sans-serif;
+		user-select: none;
+		-webkit-user-select: none;
+	}
+</style>

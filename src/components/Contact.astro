@@ -1,0 +1,22 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+
+const _INPUT__ = "max-w-full w-full px-4 py-2 rounded outline-none col-span-2 md:col-span-1"
+const _INPUT_TEXTAERA__ = "max-w-full w-full px-4 py-2 col-span-2 rounded outline-none"
+
+---
+
+<section id="Contact" class="p-4 md:p-8">
+    
+    <SectionTitle title="GET IN TOUCH" />
+
+    <p class="text-center mt-4 md:-mt-2 text-slate-700 md:px-40 lg:px-80">Feel free to Contact me by submitting the form below and I will get back to you as soon as possible</p>
+
+    <form class="bg-slate-200 grid md:grid-cols-2 gap-2 md:gap-4 p-4 md:p-8 max-w-[40rem] mx-auto mt-8 rounded">
+        <input placeholder="Full Name" type="text" name="" id="" class={`${_INPUT_TEXTAERA__}`}>
+        <input placeholder="Email" type="email" name="" id="" class={_INPUT__}>
+        <input placeholder="Phone Number" type="tel" name="" id="" class={_INPUT__}>
+        <textarea placeholder="Your message here..." name="" id="" cols="30" rows="10" class={`${_INPUT_TEXTAERA__}`}></textarea>
+        <button class="bg-blue-700 rounded w-full md:w-max col-span-2  mx-auto py-2 px-4 text-white active:scale-[.95]">SEND MESSAGE</button>
+    </form>
+</section>

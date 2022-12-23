@@ -1,0 +1,52 @@
+---
+import { Icon } from 'astro-icon'
+
+const social = [
+    "mdi:facebook", 
+    "mdi:twitter", 
+    "mdi:instagram", 
+    "mdi:pinterest"
+]
+
+const socialLink = [
+    "https://www.facebook.com/", 
+    "https://twitter.com/", 
+    "https://www.instagram.com/", 
+    "https://www.pinterest.com/"
+]
+---
+
+<footer class="inset-x-0 p-4 text-white font-light bg-slate-900">
+    
+    <section class="grid md:grid-cols-2 gap-8 container mx-auto py-6">
+        <div>
+            <h3 class="font-bold md:text-xl md:mb-4">GENIUS MULTIMEDIA</h3>
+            <p class="text-slate-300 text-sm text-justify md:text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br class="hidden md:flex"/> Non ipsa quas velit, voluptas neque similique deserunt libero quos vel sit!</p>
+        </div>
+        
+        <div class="md:text-center">
+            <h3 class="font-bold md:text-xl mb-4">SOCIALS</h3>
+            <ul class="flex md:justify-center gap-4">
+                {
+                    social.map((icon, index) => {
+                        return (
+                            <li class="w-[30px] h-[30px] hover:scale-[1.35] transition-all">
+                                <a href={socialLink[index]}>
+                                    <Icon name={icon} />
+                                </a>
+                            </li>
+                        )
+                    })
+                }
+            </ul>
+        </div>
+    </section>
+    <hr class="opacity-30 container mx-auto m-4">
+    <section class="text-sm text-center p-4">
+        <div>
+            Developed by <span class="bg-white text-black font-bold px-1 rounded-sm">TechCrony</span>
+        </div>
+        <!-- <div id="year" class="mt-4">Copyright &copy; 2022</div> -->
+    </section>
+
+</footer>
