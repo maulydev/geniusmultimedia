@@ -12,29 +12,29 @@ const tags = ["colorful", "bottle", "water"]
 <Layout title="Projects">
     <ProjectNav link="/projects" />
     <ProjectHeader />
-    <section class="bg-white p-4 md:p-8 mb-8">
+    <section class="bg-white dark:bg-slate-800 p-4 md:p-8 mb-8">
         <section class="grid md:grid-cols-2 gap-4">
             <div>
                 <img src={descImage} alt="">
             </div>
             
-            <div class="md:m-4 space-y-4">
+            <div class="md:m-4 space-y-4 [&>*]:dark:text-slate-100">
                 <h1 class="font-bold text-2xl text-slate-900">THE PROJECT NAME HERE</h1>
                 <p class="text-slate-800">Let's not forget that the understanding of the great significance of the consequential risks leads us to a clear understanding of The Efficiency of Up-To-Date Organization (Benito Anglin in The Book of the Tasks Priority Management) Surprisingly, support of the essential component should keep its influence over this operations research. This can eventually cause certain issues. </p>
                 <ul class="flex flex-wrap gap-2  text-slate-500 font-medium">
                     {
-                        tags.map(tag => <li class="bg-slate-200 text-sm px-4 py-1 rounded">#{tag}</li>)
+                        tags.map(tag => <li class="bg-slate-200 dark:bg-slate-500 text-sm px-4 py-1 rounded">#{tag}</li>)
                     }
                 </ul>
             </div>
         </section>
-        <section class="mt-16">
+        <section class="mt-16 [&>*]:dark:text-slate-100">
             <h2 class="text-2xl font-bold">THE MAKING</h2>
             <p class="text-slate-100  mb-4 px-4 py-2 bg-slate-900">SCREENSHOTS</p>
             <div>
                 <TheMaking />
             </div>
-            <p class="text-slate-100 mt-10 lg:mt-40 mb-4 px-4 py-2 bg-slate-900">VIDEO</p>
+            <p class="text-slate-100 mt-10 lg:mt-32 mb-4 px-4 py-2 bg-slate-900">VIDEO</p>
             <div class="">
                 <iframe class="w-[100%]" height="480" src="https://www.youtube.com/embed/NXcYNlEDqts" title="Gesture drawing examples  | 30 seconds timer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>

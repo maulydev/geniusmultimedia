@@ -20,11 +20,11 @@ const SKILLS = [
 <Layout title="Projects">
     <ProjectNav link="/" />
     <ProjectHeader />
-    <section class="bg-white p-4 md:p-8 mb-8">
+    <section class="bg-white dark:bg-slate-800 p-4 md:p-8 mb-8">
         <section class="[&>*]:appearance-none [&>*]:outline-none flex justify-between">
             <span class="hidden md:flex"></span>
             <!-- <input type="search" class="p-2 border-b-2" placeholder="Quick search"> -->
-            <select name="" id="" class="lg:cursor-pointer hover:bg-slate-200 border-b-2 w-full sm:w-max p-4 bg-slate-100 shadow-inner rounded font-medium">
+            <select name="" id="" class="lg:cursor-pointer hover:bg-slate-200 border-b-2 w-full sm:w-max px-4 py-2 bg-slate-100 shadow-inner rounded font-medium">
                 {
                     SKILLS.map(SKILL => <option value={SKILL}>{SKILL}</option>)
                 }

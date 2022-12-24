@@ -18,16 +18,16 @@ const SKILLS = [
     <SectionTitle title="CARE TO KNOW ME?" />
 
     <section class="grid md:grid-cols-2">
-        <div class="p-4 md:p-8 md:space-y-4">
+        <div class="p-4 md:p-8 md:space-y-4 [&>*]:dark:text-slate-300">
             <h3 class="text-lg md:text-xl text-slate-800 font-bold ">WHO I AM</h3>
             <p class="text-slate-700">As for any continuing support, it is clear that the major accomplishments, such as the commitment to quality assurance, the system concepts, the valuable information or the task analysis may share attitudes on The Progress of Organizational Content Berry Andres in The Book of the Integration Prospects</p>
         </div>
-        <div class="p-4 md:p-8 md:space-y-4">
+        <div class="p-4 md:p-8 md:space-y-4 [&>*]:dark:text-slate-300">
             <h3 class="text-lg md:text-xl text-slate-800 font-bold ">WHAT I DO</h3>
             <ul class="flex flex-wrap gap-2 text-slate-700">
                 {
                     SKILLS.map(SKILL => {
-                        return <li class="bg-slate-300 text-sm md:text-base font-medium rounded-lg px-4 py-2">{SKILL}</li>
+                        return <li class="bg-slate-300 dark:bg-slate-700 text-sm md:text-base font-medium rounded-lg px-4 py-2">{SKILL}</li>
                     })
                 }
             </ul>
