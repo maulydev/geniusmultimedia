@@ -1,28 +1,39 @@
 ---
 import { Icon } from 'astro-icon'
+import BrandIcon from './BrandIcon.astro';
 
 const { link } = Astro.props
 ---
 
 <header class="fixed top-0 inset-x-0 p-4 bg-white dark:bg-slate-900 shadow z-50">
     <div class="container mx-auto flex justify-between items-center">
-        <a title="Go back" class="text-slate-900 dark:text-slate-100 font-black w-[1.5rem] h-[1.5rem] rounded-full flex gap-1 hover:text-red-600" href={link}>
-            <Icon name="vaadin:arrow-backward" />
+        <a class="font-black text-lg md:text-2xl text-slate-900 dark:text-slate-100 flex gap-1" href="/">
+            <BrandIcon />
+            [PORTFOLIO <span class="hidden sm:block"> NAME]</span>
         </a>
-        <a title="Toggle theme" id="themeToggler3" class="bg-slate-200 text-slate-900 w-[1.8rem] p-0.5 rounded-full cursor-pointer transition-transform">
-            <Icon name="subway:cercle-5" />
-        </a>
-        <a class="font-black text-lg md:text-2xl text-slate-900 dark:text-slate-100 flex gap-1" href="/">GENIUS <span class="hidden sm:block">MULTIMEDIA</span> </a>
+        <div class="flex gap-4 md:gap-8">
+            <a title="Go back" class="hover:scale-[1.3] transition-transform text-slate-900 dark:text-slate-100 font-black w-[1.5rem] h-[1.5rem] rounded-full flex gap-1 hover:text-red-600" href={link}>
+                <Icon name="vaadin:arrow-backward" />
+            </a>
+            <a title="Toggle theme" id="themeToggler2" class="bg-slate-200 text-slate-900 w-[2rem] p-0.5 rounded-full cursor-pointer transition-transform">
+                <Icon name="subway:cercle-5" />
+            </a>
+        </div>
     </div>
 </header>
 
 <script is:inline>
-    const themeToggler3 = document.getElementById("themeToggler3");
+    const themeToggler2 = document.getElementById("themeToggler2");
 
-    themeToggler3.addEventListener("click", () => {
+    let theme = window.localStorage.getItem('theme');
+
+    theme==="dark" && themeToggler2.classList.toggle("rotate-180");
+    
+    themeToggler2.addEventListener("click", () => {
+
 		html.classList.toggle("dark");
 		html.classList.toggle("light");
-		themeToggler3.classList.toggle("rotate-180");
+		themeToggler2.classList.toggle("rotate-180");
 		window.localStorage.setItem('theme', html.classList);
     })
 </script>

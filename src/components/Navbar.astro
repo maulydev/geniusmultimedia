@@ -1,18 +1,22 @@
 ---
 import { Icon } from 'astro-icon'
+import BrandIcon from './BrandIcon.astro';
 
 const navlinks = ['Home', 'About', 'Projects', 'Contact']
 ---
 
 <header class="md:fixed md:top-0 inset-x-0 p-4 bg-white dark:bg-slate-900 dark:text-slate-100 shadow z-50">
     <div class="container mx-auto flex justify-between">
-        <a class="font-black text-2xl text-slate-900 dark:text-slate-100 flex gap-1" href="/">GENIUS <span class="hidden md:block">MULTIMEDIA</span> </a>
-        <nav class="hidden md:block">
-            <ul class="flex gap-8">
+        <a class="font-black text-2xl text-slate-900 dark:text-slate-100 flex items-center gap-1" href="/">
+            <BrandIcon />
+            [ PORTFOLIO <span class="hidden md:block"> NAME ]</span>
+        </a>
+        <nav class="">
+            <ul class="gap-8 md:flex">
                 {
                     navlinks.map(link => {
                         return (
-                            <li>
+                            <li class="hidden md:flex">
                                 <a href={`#${link}`} class="relative group hover:text-blue-700">
                                     {link}
                                     <div class="absolute w-full mt-1 h-0.5 bg-blue-700 scale-x-0 group-hover:scale-x-75 transition-transform duration-500"></div>
@@ -26,8 +30,5 @@ const navlinks = ['Home', 'About', 'Projects', 'Contact']
                 </div>
             </ul>
         </nav>
-        <div title="Toggle theme" id="themeToggler2" class="bg-slate-200 text-slate-900  w-[1.8rem] h-[1.8rem] p-0.5 rounded-full md:hidden transition-transform">
-            <Icon name="subway:cercle-5" />
-        </div>
     </div>
 </header>

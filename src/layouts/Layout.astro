@@ -44,28 +44,17 @@ import Footer from '../components/Footer.astro';
 
 <script is:inline>
     const themeToggler = document.getElementById("themeToggler");
-    const themeToggler2 = document.getElementById("themeToggler2");
-
     const html = document.getElementById("html");
 
 	let theme = window.localStorage.getItem('theme');
 
 	theme===null ? window.localStorage.setItem('theme', 'light') : html.className = theme;
-
 	theme==="dark" && themeToggler.classList.toggle("rotate-180");
-	theme==="dark" && themeToggler2.classList.toggle("rotate-180");
 
     themeToggler.addEventListener("click", () => {
         html.classList.toggle("dark");
         html.classList.toggle("light");
 		themeToggler.classList.toggle("rotate-180");
-		window.localStorage.setItem('theme', html.classList);
-    })
-    
-	themeToggler2.addEventListener("click", () => {
-		html.classList.toggle("dark");
-		html.classList.toggle("light");
-		themeToggler2.classList.toggle("rotate-180");
 		window.localStorage.setItem('theme', html.classList);
     })
 </script>
